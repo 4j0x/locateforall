@@ -5,8 +5,6 @@
 execute in overworld run forceload add 21999999 21999999 21999999 21999999
 execute in the_end run forceload add 21999999 21999999 21999999 21999999
 execute in the_nether run forceload add 21999999 21999999 21999999 21999999
-###DATAPACK WILL ONLY WORK WITH VERSIONS AFTER 21w37a
-
 # Overworld
 scoreboard objectives add buried_treasure trigger
 scoreboard objectives add desert_pyramid trigger
@@ -28,10 +26,12 @@ scoreboard objectives add fortress trigger
 scoreboard objectives add nether_fossil trigger
 # End
 scoreboard objectives add endcity trigger
+# etc
+scoreboard objectives add uninstallconfirm dummy
 
 
 
-# overworld sboards
+# overworld scoreboards
 scoreboard players enable @a[tag=!locateforall_banned] buried_treasure
 scoreboard players enable @a[tag=!locateforall_banned] desert_pyramid
 scoreboard players enable @a[tag=!locateforall_banned] igloo
@@ -47,10 +47,10 @@ scoreboard players enable @a[tag=!locateforall_banned] stronghold
 scoreboard players enable @a[tag=!locateforall_banned] swamp_hut
 scoreboard players enable @a[tag=!locateforall_banned] village
 schedule function locate4all:main 1t
-# end sboards
+# end scoreboards
 scoreboard players enable @a[tag=!locateforall_banned] endcity
 schedule function locate4all:mainend 2t
-# nether sboards
+# nether scoreboards
 scoreboard players enable @a[tag=!locateforall_banned] bastion_remnant
 scoreboard players enable @a[tag=!locateforall_banned] fortress
 scoreboard players enable @a[tag=!locateforall_banned] nether_fossil
@@ -64,7 +64,4 @@ schedule function locate4all:mainnether 3t
 #> tellraw @s {"nbt": "LastOutput",  "block": "~ 70 ~",  "interpret": true}
 
 
-## Minecraft Snapshot 21w37a removed the length limit for scoreboards - 1.18 versions of the pack will use the trigger locate_{STRUCTURE}
-## I think i have gone insane
-
-tellraw @a ["",{"text":"[Locate4all]","color":"aqua"},{"text":"[v1.0.0-pre1]","color":"gray","hoverEvent":{"action":"show_text","contents":[]}},{"text":"Finished booting datapack","hoverEvent":{"action":"show_text","contents":[]}}," - https://github.com/4j0x"]
+tellraw @a ["",{"text":"[Locate4all]","color":"aqua"},{"text":"[v1.0.0-pre2]","color":"gray","hoverEvent":{"action":"show_text","contents":[]}},{"text":"Finished booting datapack","hoverEvent":{"action":"show_text","contents":[]}}," - https://github.com/4j0x/locateforall"]
