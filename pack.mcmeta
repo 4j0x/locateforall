@@ -1,6 +1,6 @@
 {
     "pack": {
-        "pack_format": 8,
+        "pack_format": 7,
         "description": "Simple way of allowing everyone to use the locate command"
     }
 }
