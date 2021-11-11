@@ -1,5 +1,7 @@
 # Locateforall v1.0.0-pre1
 
+## How it works
+There is a command block that lives in the millions of blocks which when told it locates the nearest structure from the player then the data is read and told to the user. There might be an easier solution to allowing the locate command, but this is what I have come up with.
 ## Using
 
 To install the datapack simply drop it into the world's datapack folder 
